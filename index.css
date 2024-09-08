@@ -133,10 +133,8 @@ section.download-layout p {
 section.download-layout button {
   width: 75%;
   margin-top: 4vw;
-  background-color: #ff5503;
   border-width: 0;
   font-family: "sfbold";
-  color: white;
   margin-left: 2vw;
   margin-right: 2vw;
   font-size: 4vw;
@@ -145,6 +143,11 @@ section.download-layout button {
   padding-right: 5vw;
   padding-top: 3vw;
   padding-bottom: 3vw;
+}
+
+#btnDownload {
+  color: white;
+  background-color: #ff5503;
 }
 
 #btnAxcore {
