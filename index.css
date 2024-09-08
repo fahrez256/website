@@ -48,6 +48,7 @@ header {
 header h2 {
   margin: 0;
   padding: 0;
+  font-size: 8vw;
   color: #fafafa;
   font-family: "gfbold"; /* Gunakan font yang diimpor */
 }
