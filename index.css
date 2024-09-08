@@ -148,11 +148,31 @@ section.download-layout button {
 #btnDownload {
   color: white;
   background-color: #ff5503;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+  -webkit-tap-highlight-color: transparent;
+}
+
+#btnDownload:active {
+  background-color: #e04f00; /* Warna yang lebih gelap untuk efek klik */
+  transform: scale(0.98); /* Efek tekan dengan sedikit perubahan ukuran */
 }
 
 #btnAxcore {
   color: #aaa;
   background-color: #363636;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+  -webkit-tap-highlight-color: transparent;
+}
+
+#btnAxcore:active {
+  background-color: #2d2d2d; /* Warna yang lebih gelap untuk efek klik */
+  transform: scale(0.98); /* Efek tekan dengan sedikit perubahan ukuran */
 }
 
 section.item-layout {
