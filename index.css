@@ -39,16 +39,17 @@ p {
 
 /* Header Section */
 header {
+  background-color: #161616;
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 5vw;
+  padding: 3.5vw;
 }
 
 header h2 {
+  font-size: 5vw;
   margin: 0;
   padding: 0;
-  font-size: 8vw;
   color: #fafafa;
   font-family: "gfbold"; /* Gunakan font yang diimpor */
 }
@@ -77,6 +78,7 @@ main {
 
 main div.info-app {
   display: flex;
+  margin-top: 6vw;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -88,19 +90,18 @@ main p#app-name {
 }
 
 main p#app-dev {
-  font-family: "gfbold";
-  color: #b56c47;
+  font-family: "sfregular";
+  color: #db5b1b;
   font-size: 2.7vw;
 }
 
 main p#app-desc span {
-  color: #b56c47;
-  font-weight: 600;
+  color: #db5b1b;
 }
 
 main p#app-desc {
   color: #aaa;
-  margin-top: 6vw;
+  margin-top: 10vw;
   text-align: center;
   font-size: 3.2vw;
 }
