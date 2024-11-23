@@ -1,0 +1,201 @@
+@font-face {
+  font-family: "gfbold";
+  src: url("./fonts/gfbold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "gflight";
+  src: url("./fonts/gflight.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "sfregular";
+  src: url("./fonts/sfregular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "sfbold";
+  src: url("./fonts/sfbold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-color: #101010;
+  font-family: "sfregular";
+  color: #fafafa;
+  margin: 0;
+}
+
+p {
+  margin: 0px;
+}
+
+/* Header Section */
+header {
+  background-color: #161616;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 3.5vw;
+}
+
+header h2 {
+  font-size: 5vw;
+  margin: 0;
+  padding: 0;
+  color: #fafafa;
+  font-family: "gfbold"; /* Gunakan font yang diimpor */
+}
+
+header h2 span {
+  margin: 0;
+  padding: 0;
+  color: #ff5503;
+  font-family: "gfbold"; /* Gunakan font yang diimpor */
+}
+
+header img {
+  width: 12vw;
+  height: 12vw;
+  margin-right: 3vw;
+}
+
+/* Main Section */
+
+main {
+  display: flex;
+  padding: 8vw;
+  flex-direction: column;
+  justify-content: center;
+}
+
+main div.info-app {
+  display: flex;
+  margin-top: 6vw;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+main p#app-name {
+  font-family: "gfbold";
+  font-size: 6vw;
+}
+
+main p#app-dev {
+  font-family: "sfregular";
+  color: #db5b1b;
+  font-size: 2.7vw;
+}
+
+main p#app-desc span {
+  color: #db5b1b;
+}
+
+main p#app-desc {
+  color: #aaa;
+  margin-top: 10vw;
+  text-align: center;
+  font-size: 3.2vw;
+}
+
+/* Section Style */
+section span {
+  color: #ddd;
+  font-weight: 600;
+}
+
+section.download-layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 5vw;
+  padding: 5vw;
+}
+
+section.download-layout p {
+  text-align: center;
+  margin-top: 2vw;
+  font-size: 2.5vw;
+  color: #363636;
+  max-width: 70%;
+}
+
+section.download-layout button {
+  width: 75%;
+  margin-top: 4vw;
+  border-width: 0;
+  font-family: "sfbold";
+  margin-left: 2vw;
+  margin-right: 2vw;
+  font-size: 4vw;
+  border-radius: 15vw;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  padding-top: 3vw;
+  padding-bottom: 3vw;
+}
+
+#btnDownload {
+  color: white;
+  background-color: #ff5503;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+  -webkit-tap-highlight-color: transparent;
+}
+
+#btnDownload:active {
+  background-color: #e04f00; /* Warna yang lebih gelap untuk efek klik */
+  transform: scale(0.98); /* Efek tekan dengan sedikit perubahan ukuran */
+}
+
+#btnAxcore {
+  color: #aaa;
+  background-color: #363636;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+  -webkit-tap-highlight-color: transparent;
+}
+
+#btnAxcore:active {
+  background-color: #2d2d2d; /* Warna yang lebih gelap untuk efek klik */
+  transform: scale(0.98); /* Efek tekan dengan sedikit perubahan ukuran */
+}
+
+section.item-layout {
+  margin-top: 8vw;
+  text-align: center;
+  background-color: #161616;
+  border-radius: 5vw;
+  padding: 5vw;
+}
+
+i {
+  margin-right: 2vw;
+}
+
+section p.item-title {
+  font-size: 5vw;
+  font-family: "sfbold";
+  margin-bottom: 3vw;
+}
+
+section p.item-desc {
+  font-size: 3vw;
+  text-align: justify;
+  color: #aaa;
+  margin-top: 5vw;
+}
