@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gateway</title>
+    <style>
+      @font-face {
+        font-family: "sfrancisco";
+        src: url("../fonts/sfregular.ttf") format("truetype");
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      body {
+        background-color: #101010;
+        color: #fafafa;
+        margin: 10vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: "sfrancisco", sans-serif;
+      }
+
+/*       p {
+        margin-vertical: 3vw;
+      } */
+
+      .box-id {
+        background-color: #202020;
+        border-radius: 5vw;
+        margin: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+
+      .btn-copy {
+        background-color: #ff5503;
+        border-radius: 50vw;
+        margin: 0;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+      }
+
+      .btn-continue {
+        background-color: #ff5503;
+        border-radius: 50vw;
+        margin: 0;
+        width: 80%;
+        display: none;
+        justify-content: center;
+      }
+
+      .btn-continue p {
+        padding: 0;
+        font-size: 4.2vw;
+      }
+
+      .margin-bot {
+        margin: 0 0 4vw 0;
+      }
+
+      .btn-normal {
+        background-color: #4e423d;
+        border-radius: 50vw;
+        border-width: 0;
+        font-size: 4vw;
+        color: #afafaf;
+        padding: 3vw 6vw;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="margin-bot" style="font-size: 6vw; font-weight: bold">Gateway</p>
+    <p
+      class="margin-bot"
+      style="color: #464646; font-size: 3vw; padding: 0 2vw"
+    >
+      Please copy this id before you make payment, and paste it in message
+      before buying VIP
+    </p>
+    <div class="box-id margin-bot">
+      <p
+        id="displayId"
+        style="
+          font-size: 6vw;
+          padding: 4vw;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        "
+      >
+        ID not found.
+      </p>
+    </div>
+    <div class="btn-copy" id="btnCopy">
+      <p>Copy ID</p>
+    </div>
+    <div class="btn-continue" id="btnContinue">
+      <p>Continue to pay</p>
+    </div>
+
+    <script>
+      console.log("Hello From Body");
+      const gvrId = "gvr";
+      const gvrLink =
+        "https://sociabuzz.com/fahrezone";
+      const displayId = document.getElementById("displayId");
+      const btnCopy = document.getElementById("btnCopy");
+      const btnContinue = document.getElementById("btnContinue");
+      const continueText = btnContinue.querySelector("p");
+
+      const appId = getQueryParam("app");
+
+      btnCopy.addEventListener("click", () => {
+        copyText();
+      });
+
+      btnContinue.addEventListener("click", () => {
+        let link = "https://sociabuzz.com/fahrezone";
+        if (appId == gvrId) {
+          link = gvrLink;
+        }
+        openLink(link);
+      });
+
+      function openLink(link) {
+        window.open(link);
+      }
+
+      function afterCopy() {
+        let text = "Continue to pay";
+        if (appId == gvrId) {
+          text = text + " GVR";
+        }
+        continueText.textContent = text;
+        btnCopy.style.display = "none";
+        btnContinue.style.display = "flex";
+      }
+
+      function copyText() {
+        const text = displayId.textContent;
+        navigator.clipboard
+          .writeText(text)
+          .then(() => {
+            afterCopy();
+          })
+          .catch((err) => {
+            console.error("Could not copy text: ", err);
+          });
+      }
+
+      function setMessage(message) {
+        this.message.textContent = message;
+      }
+
+      function getQueryParam(param) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(param);
+      }
+
+      const id = getQueryParam("id");
+
+      if (id) {
+        displayId.textContent = id;
+      } else {
+        btnCopy.style.display = "none";
+        displayId.innerHTML =
+          "ID not found.<span style='font-size: 3vw; color: #ff5503'>Please open this web from App</span>";
+      }
+    </script>
+  </body>
+</html>
