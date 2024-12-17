@@ -116,14 +116,6 @@ class Dialog {
     const styleSheet = document.createElement('style');
     styleSheet.type = 'text/css';
     styleSheet.innerHTML = `
-      @font-face {
-        font-family: 'GFBold'; /* Nama font yang akan digunakan */
-        src: url('./font/gfbold.ttf') format('truetype'); /* Lokasi file font */
-      }
-      @font-face {
-        font-family: 'GFLight'; /* Nama font yang akan digunakan */
-        src: url('./font/gflight.ttf') format('truetype'); /* Lokasi file font */
-      }
       @keyframes fadeIn {
         from { opacity: 0; }
         to { opacity: 1; }
