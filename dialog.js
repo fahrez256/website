@@ -36,13 +36,14 @@ class Dialog {
     this.titleElement = document.createElement('p');
     this.titleElement.className = 'custom-dialog-title';
     this.titleElement.style.fontSize = '5vw';
+    this.titleElement.style.fontFamily = 'GFBoldDialog';
     this.titleElement.style.color = '#ff5503';
     this.titleElement.style.margin = '0 2vw 0 2vw';
 
     this.subtitleElement = document.createElement('p');
     this.subtitleElement.className = 'custom-dialog-subtitle';
     this.subtitleElement.style.fontSize = '3vw';
-    this.subtitleElement.style.fontFamily = 'GFLight';
+    this.subtitleElement.style.fontFamily = 'GFLightDialog';
     this.subtitleElement.style.color = '#606060';
     this.subtitleElement.style.margin = '1vw 2vw 0 2vw';
 
@@ -55,7 +56,7 @@ class Dialog {
     this.buttonElement.style.color = 'white';
     this.buttonElement.style.border = 'none';
     this.buttonElement.style.fontSize = '1em';
-    this.buttonElement.style.fontFamily = 'GFBold';
+    this.buttonElement.style.fontFamily = 'GFBoldDialog';
     this.buttonElement.style.borderRadius = '180vw';
     this.buttonElement.style.display = 'none';
     this.buttonElement.style.cursor = 'pointer';
@@ -116,6 +117,14 @@ class Dialog {
     const styleSheet = document.createElement('style');
     styleSheet.type = 'text/css';
     styleSheet.innerHTML = `
+      @font-face {
+        font-family: 'GFBoldDialog';
+        src: url('https://fahrez.one/fonts/gfbold.woff2') format('woff2');
+      } 
+      @font-face {
+        font-family: 'GFLightDialog';
+        src: url('https://fahrez.one/fonts/gflight.woff2') format('woff2');
+      }
       @keyframes fadeIn {
         from { opacity: 0; }
         to { opacity: 1; }
